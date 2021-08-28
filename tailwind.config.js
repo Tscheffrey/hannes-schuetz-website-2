@@ -12,6 +12,9 @@ module.exports = {
           100: '#121212',
         },
       },
+      borderWidth: {
+        3: '3px',
+      },
     },
   },
   variants: {
