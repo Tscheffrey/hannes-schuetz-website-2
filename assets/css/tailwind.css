@@ -1,4 +1,4 @@
 body {
-  font-family: sans-serif;
+  font-family: 'Work Sans', sans-serif;
   @apply bg-secondary-100 text-primary-100;
 }

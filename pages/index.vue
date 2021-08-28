@@ -1,5 +1,5 @@
 <template>
-  <div class="">Hello World!</div>
+  <LandingPage/>
 </template>
 
 <script>
