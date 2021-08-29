@@ -1,5 +1,7 @@
 <template>
-  <div class="flex flex-col items-stretch h-screen overflow-hidden border-3">
+  <div
+    class="fixed top-0 left-0 flex flex-col items-stretch w-full overflow-hidden  h-viewportY border-3"
+  >
     <!-- Mobile Logo -->
     <div class="flex-shrink-0 p-8 border-b-3 sm:hidden">
       <MobileLogo class="w-full" />

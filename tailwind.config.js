@@ -31,6 +31,7 @@ module.exports = {
       },
       spacing: {
         18: '4.5rem',
+        viewportY: 'fill-available',
       },
       lineHeight: {
         tighter: '0.9',
