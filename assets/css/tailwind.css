@@ -5,14 +5,14 @@
 @tailwind utilities;
 
 :root {
-  --color-primary-100: #121212;
-  --color-secondary-100: #f7f7f7;
+  --color-primary-100: #181717;
+  --color-secondary-100: #dadde0;
 }
 
 /* reverse colors in dark theme */
 .dark {
-  --color-primary-100: #f7f7f7;
-  --color-secondary-100: #121212;
+  --color-primary-100: #dadde0;
+  --color-secondary-100: #181717;
 }
 
 body {
