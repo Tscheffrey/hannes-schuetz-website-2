@@ -89,4 +89,5 @@ sw.*
 # Vim swap files
 *.swp
 
-assets/fonts
+# generated font files
+/assets/css/fonts.css
