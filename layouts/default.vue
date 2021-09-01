@@ -1,6 +1,6 @@
 <template>
   <div
-    class="fixed top-0 left-0 flex flex-col items-stretch w-full overflow-hidden  h-viewportY border-3"
+    class="absolute top-0 left-0 flex flex-col items-stretch w-full overflow-hidden  h-viewportY border-3"
   >
     <!-- Mobile Logo -->
     <NuxtLink to="/" class="flex-shrink-0 p-8 border-b-3 sm:hidden">
