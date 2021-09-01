@@ -20,7 +20,6 @@ module.exports = {
       borderWidth: {
         3: '3px',
       },
-      // eslint-disable-next-line no-undef
       borderColor: { DEFAULT: 'currentColor' },
       keyframes: {
         logoScroll: {
@@ -37,6 +36,9 @@ module.exports = {
       },
       lineHeight: {
         tighter: '0.9',
+      },
+      fontFamily: {
+        sans: ['Work Sans', 'sans-serif'],
       },
     },
   },

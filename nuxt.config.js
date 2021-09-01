@@ -41,6 +41,8 @@ export default {
     '@nuxtjs/pwa',
     // https://go.nuxtjs.dev/content
     '@nuxt/content',
+    // https://google-fonts.nuxtjs.org/
+    '@nuxtjs/google-fonts',
   ],
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
@@ -61,6 +63,7 @@ export default {
 
   googleFonts: {
     download: true,
+    base64: true,
     families: {
       Roboto: true,
       'Work+Sans': {
