@@ -81,11 +81,9 @@ export default {
   },
   methods: {
     toggleDarkMode() {
-      if (document.body.classList.contains('dark')) {
-        document.body.classList.remove('dark')
-      } else {
-        document.body.classList.add('dark')
-      }
+      document.body.classList.contains('dark')
+        ? document.body.classList.remove('dark')
+        : document.body.classList.add('dark')
     },
   },
 }
