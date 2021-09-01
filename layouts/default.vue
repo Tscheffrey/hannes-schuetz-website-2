@@ -45,14 +45,11 @@
         >
           <SunIcon />
         </div>
-
         <div
           class="absolute top-0 left-0 flex items-center justify-center w-full h-full transition-transform duration-300 translate-x-12  dark:translate-x-0"
         >
           <MoonIcon />
         </div>
-
-        <!-- dark:-translate-x-12 -->
       </button>
       <ul
         class="flex flex-wrap items-center w-full h-full px-8 font-medium uppercase  sm:order-1 sm:px-3 lg:px-4"
