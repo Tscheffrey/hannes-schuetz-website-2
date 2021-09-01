@@ -41,12 +41,12 @@
         @click="toggleDarkMode"
       >
         <div
-          class="absolute top-0 left-0 flex items-center justify-center w-full h-full transition-transform duration-300 translate-x-0  dark:-translate-x-12"
+          class="absolute top-0 left-0 flex items-center justify-center w-full h-full transition-transform duration-300  dark:translate-x-12 dark:-translate-y-12 dark:rotate-180"
         >
           <SunIcon />
         </div>
         <div
-          class="absolute top-0 left-0 flex items-center justify-center w-full h-full transition-transform duration-300 translate-x-12  dark:translate-x-0"
+          class="absolute top-0 left-0 flex items-center justify-center w-full h-full transition-transform duration-300 -rotate-180 -translate-x-12 translate-y-12  dark:translate-x-0 dark:translate-y-0 dark:rotate-0"
         >
           <MoonIcon />
         </div>
