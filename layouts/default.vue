@@ -37,9 +37,22 @@
 
     <div class="box-content flex flex-shrink-0 h-12 border-t-3">
       <button
-        class="box-content flex items-center justify-center flex-shrink-0 w-12  border-r-3 sm:border-r-0 sm:border-l-3 sm:order-2"
+        class="box-content relative flex-shrink-0 w-12 overflow-hidden  border-r-3 sm:border-r-0 sm:border-l-3 sm:order-2"
+        @click="toggleDarkMode"
       >
-        <SunIcon />
+        <div
+          class="absolute top-0 left-0 flex items-center justify-center w-full h-full transition-transform duration-300 translate-x-0  dark:-translate-x-12"
+        >
+          <SunIcon />
+        </div>
+
+        <div
+          class="absolute top-0 left-0 flex items-center justify-center w-full h-full transition-transform duration-300 translate-x-12  dark:translate-x-0"
+        >
+          <MoonIcon />
+        </div>
+
+        <!-- dark:-translate-x-12 -->
       </button>
       <ul
         class="flex flex-wrap items-center w-full h-full px-8 font-medium uppercase  sm:order-1 sm:px-3 lg:px-4"
@@ -56,11 +69,27 @@
 </template>
 
 <script>
-import { SunIcon } from 'vue-feather-icons'
+import { SunIcon, MoonIcon } from 'vue-feather-icons'
 import MobileLogo from '~/assets/img/logo.svg?inline'
 import DesktopLogo from '~/assets/img/logo_vertical.svg?inline'
 
 export default {
-  components: { SunIcon, MobileLogo, DesktopLogo },
+  components: { SunIcon, MobileLogo, DesktopLogo, MoonIcon },
+  head() {
+    return {
+      bodyAttrs: {
+        class: `dark`,
+      },
+    }
+  },
+  methods: {
+    toggleDarkMode() {
+      if (document.body.classList.contains('dark')) {
+        document.body.classList.remove('dark')
+      } else {
+        document.body.classList.add('dark')
+      }
+    },
+  },
 }
 </script>

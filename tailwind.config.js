@@ -1,15 +1,15 @@
 module.exports = {
   purge: [],
   mode: 'jit',
-  darkMode: false, // or 'media' or 'class'
+  darkMode: 'class', // or 'media' or 'class'
   theme: {
     extend: {
       colors: {
         primary: {
-          100: '#F7F7F7',
+          100: 'var(--color-primary-100)',
         },
         secondary: {
-          100: '#121212',
+          100: 'var(--color-secondary-100)',
         },
         instagram: '#da2e76',
         twitter: '#00ACEE',
@@ -20,6 +20,8 @@ module.exports = {
       borderWidth: {
         3: '3px',
       },
+      // eslint-disable-next-line no-undef
+      borderColor: { DEFAULT: 'currentColor' },
       keyframes: {
         logoScroll: {
           '0%': { transform: 'translateY(-50%)' },
