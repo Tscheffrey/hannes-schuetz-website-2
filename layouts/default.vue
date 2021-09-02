@@ -4,7 +4,15 @@
   >
     <!-- Mobile Logo -->
     <NuxtLink to="/" class="flex-shrink-0 p-8 border-b-3 sm:hidden">
-      <MobileLogo class="w-full" />
+      <div class="flex mb-4 logo-wrapper-mobile animate-logoScrollMobile1">
+        <HannesLogo class="flex-shrink-0 w-1/2 pr-8" />
+        <HannesLogo class="flex-shrink-0 w-1/2 pr-8" />
+      </div>
+
+      <div class="flex logo-wrapper-mobile animate-logoScrollMobile2">
+        <SchuetzLogo class="flex-shrink-0 w-1/2 pr-8" />
+        <SchuetzLogo class="flex-shrink-0 w-1/2 pr-8" />
+      </div>
     </NuxtLink>
 
     <div
@@ -67,11 +75,12 @@
 
 <script>
 import { SunIcon, MoonIcon } from 'vue-feather-icons'
-import MobileLogo from '~/assets/img/logo.svg?inline'
+import HannesLogo from '~/assets/img/logo_hannes.svg?inline'
+import SchuetzLogo from '~/assets/img/logo_schuetz.svg?inline'
 import DesktopLogo from '~/assets/img/logo_vertical.svg?inline'
 
 export default {
-  components: { SunIcon, MobileLogo, DesktopLogo, MoonIcon },
+  components: { SunIcon, HannesLogo, SchuetzLogo, DesktopLogo, MoonIcon },
   head() {
     return {
       bodyAttrs: {
@@ -92,5 +101,9 @@ export default {
 <style lang="postcss" scoped>
 .content-wrapper {
   -webkit-overflow-scrolling: touch;
+}
+
+.logo-wrapper-mobile {
+  width: calc(200% + 64px);
 }
 </style>
