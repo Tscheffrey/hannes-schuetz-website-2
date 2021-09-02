@@ -26,15 +26,15 @@ module.exports = {
           '0%': { transform: 'translateY(-50%)' },
           '100%': { transform: 'translateY(0)' },
         },
-        logoScrollMobile1: {
+        logoScrollMobile: {
           '0%': { transform: 'translatex(0)' },
           '100%': { transform: 'translateX(-50%)' },
         },
       },
       animation: {
-        logoScroll: 'logoScroll 14s linear infinite',
-        logoScrollMobile1: 'logoScrollMobile1 5s linear infinite',
-        logoScrollMobile2: 'logoScrollMobile1 5s linear infinite reverse',
+        logoScroll: 'logoScroll 18s linear infinite',
+        logoScrollMobile1: 'logoScrollMobile 10s linear infinite',
+        logoScrollMobile2: 'logoScrollMobile 10s linear infinite reverse',
       },
       spacing: {
         18: '4.5rem',
