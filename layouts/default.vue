@@ -5,13 +5,21 @@
     <!-- Mobile Logo -->
     <NuxtLink to="/" class="flex-shrink-0 p-8 border-b-3 sm:hidden">
       <div class="flex mb-4 logo-wrapper-mobile animate-logoScrollMobile1">
-        <HannesLogo class="flex-shrink-0 w-1/2 pr-8" />
-        <HannesLogo class="flex-shrink-0 w-1/2 pr-8" />
+        <div class="flex-shrink-0 w-1/2 pr-12">
+          <HannesLogo class="w-full" />
+        </div>
+        <div class="flex-shrink-0 w-1/2 pr-12">
+          <HannesLogo class="w-full" />
+        </div>
       </div>
 
       <div class="flex logo-wrapper-mobile animate-logoScrollMobile2">
-        <SchuetzLogo class="flex-shrink-0 w-1/2 pr-8" />
-        <SchuetzLogo class="flex-shrink-0 w-1/2 pr-8" />
+        <div class="flex-shrink-0 w-1/2 pr-12">
+          <SchuetzLogo class="w-full" />
+        </div>
+        <div class="flex-shrink-0 w-1/2 pr-12">
+          <SchuetzLogo class="w-full" />
+        </div>
       </div>
     </NuxtLink>
 
@@ -104,6 +112,6 @@ export default {
 }
 
 .logo-wrapper-mobile {
-  width: calc(200% + 64px);
+  width: calc(200% + 96px);
 }
 </style>
