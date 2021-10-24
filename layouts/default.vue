@@ -46,7 +46,7 @@
       </NuxtLink>
 
       <!-- Content -->
-      <div class="flex-grow">
+      <div class="flex-grow overflow-x-hidden">
         <Nuxt />
       </div>
     </div>
