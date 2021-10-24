@@ -1,9 +1,12 @@
 <template>
   <div
-    class="absolute top-0 left-0 flex flex-col items-stretch w-full overflow-hidden  h-viewportY border-3"
+    class="flex flex-col items-stretch w-full min-h-screen  border-l-3 border-r-3 sm:border-t-3"
   >
     <!-- Mobile Logo -->
-    <NuxtLink to="/" class="flex-shrink-0 p-8 border-b-3 sm:hidden">
+    <NuxtLink
+      to="/"
+      class="sticky top-0 z-40 block p-8 overflow-hidden  border-b-3 sm:hidden border-t-3 bg-secondary-100"
+    >
       <div class="flex mb-4 logo-wrapper-mobile animate-logoScrollMobile1">
         <div class="flex-shrink-0 w-1/2 pr-12">
           <HannesLogo class="w-full" />
@@ -23,19 +26,16 @@
       </div>
     </NuxtLink>
 
-    <div
-      class="relative flex-grow flex-shrink h-full overflow-x-auto  sm:flex sm:overflow-x-hidden"
-    >
+    <div class="sm:flex">
       <!-- Desktop Logo -->
       <NuxtLink
         to="/"
-        class="relative justify-center flex-shrink-0 hidden h-full overflow-hidden  lg:block w-14 sm:block border-r-3 lg:w-18"
+        class="sticky top-0 z-40 justify-center flex-shrink-0 hidden h-screen overflow-hidden  w-14 sm:block border-r-3 lg:w-18"
       >
         <DesktopLogo
           class="
             absolute
             top-0
-            bottom-0
             w-10
             lg:w-14
             left-[7px]
@@ -46,12 +46,15 @@
       </NuxtLink>
 
       <!-- Content -->
-      <div class="w-full h-full sm:overflow-x-auto content-wrapper">
+      <div class="flex-grow">
         <Nuxt />
       </div>
     </div>
 
-    <div class="box-content flex flex-shrink-0 h-12 border-t-3">
+    <!-- Footer -->
+    <div
+      class="box-content sticky bottom-0 z-40 flex flex-shrink-0 h-12  border-t-3 bg-secondary-100 border-b-3"
+    >
       <button
         class="box-content relative flex-shrink-0 w-12 overflow-hidden  border-r-3 sm:border-r-0 sm:border-l-3 sm:order-2"
         @click="toggleDarkMode"
@@ -98,19 +101,13 @@ export default {
   },
   methods: {
     toggleDarkMode() {
-      document.body.classList.contains('dark')
-        ? document.body.classList.remove('dark')
-        : document.body.classList.add('dark')
+      document.body.classList.toggle('dark')
     },
   },
 }
 </script>
 
 <style lang="postcss" scoped>
-.content-wrapper {
-  -webkit-overflow-scrolling: touch;
-}
-
 .logo-wrapper-mobile {
   width: calc(200% + 96px);
 }
