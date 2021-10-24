@@ -18,7 +18,7 @@ export default {
   css: ['@/assets/css/base.css', '@/assets/css/transitions.css'],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
-  plugins: [],
+  plugins: ['@/plugins/router'],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: true,
@@ -43,7 +43,29 @@ export default {
     '@nuxt/content',
     // https://google-fonts.nuxtjs.org/
     '@nuxtjs/google-fonts',
+    // https://i18n.nuxtjs.org/
+    '@nuxtjs/i18n',
   ],
+
+  i18n: {
+    locales: [
+      {
+        code: 'en',
+        file: 'en.js',
+      },
+      {
+        code: 'de',
+        file: 'de.js',
+      },
+    ],
+    defaultLocale: 'de',
+    skipSettingLocaleOnNavigate: true,
+    lazy: true,
+    langDir: 'lang/',
+    vueI18n: {
+      fallbackLocale: 'de',
+    },
+  },
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
   axios: {},

@@ -31,7 +31,7 @@
 
     <!-- Desktop Logo -->
     <NuxtLink
-      to="/"
+      :to="localePath('/')"
       class="fixed top-0 left-0 z-40 justify-center flex-shrink-0 hidden h-full overflow-hidden  w-14 sm:block border-r-3 lg:w-18"
     >
       <DesktopLogo
@@ -75,10 +75,20 @@
         class="flex flex-wrap items-center w-full h-full px-8 font-medium uppercase  sm:order-1 sm:px-3 lg:px-4"
       >
         <li class="mr-6">
-          <NuxtLink to="/imprint">Imprint</NuxtLink>
+          <NuxtLink :to="localePath('/imprint')">
+            {{ $t('base.imprint') }}
+          </NuxtLink>
         </li>
-        <li>
-          <NuxtLink to="/about">About</NuxtLink>
+        <li class="mr-6">
+          <NuxtLink :to="localePath('/about')">{{ $t('base.about') }}</NuxtLink>
+        </li>
+        <div class="flex-grow"></div>
+        <li class="justify-self-end">
+          <NuxtLink
+            class="uppercase"
+            :to="switchLocalePath($i18n.locale === 'de' ? 'en' : 'de')"
+            >{{ $i18n.locale === 'de' ? 'en' : 'de' }}</NuxtLink
+          >
         </li>
       </ul>
     </div>

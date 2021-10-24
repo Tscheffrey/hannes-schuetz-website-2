@@ -1,24 +1,36 @@
 <template>
   <div>
     <div class="w-full p-8 uppercase border-b-3">
-      <p class="mb-4 font-medium lg:text-2xl lg:mb-6">What do I do?</p>
+      <p class="mb-4 font-medium lg:text-2xl lg:mb-6">
+        {{ $t('index.whatIDo') }}
+      </p>
       <ul class="text-3xl font-bold sm:text-4xl lg:text-6xl leading-tighter">
-        <li class="mb-3 lg:mb-5 last-of-type:mb-0">Web Development</li>
-        <li class="mb-3 lg:mb-5 last-of-type:mb-0">Digital Photography</li>
-        <li class="mb-3 lg:mb-5 last-of-type:mb-0">Analog Photography</li>
+        <li class="mb-3 lg:mb-5 last-of-type:mb-0">
+          {{ $t('index.webDevelopment') }}
+        </li>
+        <li class="mb-3 lg:mb-5 last-of-type:mb-0">
+          {{ $t('index.digitalPhotography') }}
+        </li>
+        <li class="mb-3 lg:mb-5 last-of-type:mb-0">
+          {{ $t('index.analogPhotography') }}
+        </li>
       </ul>
     </div>
 
     <div class="w-full p-8 uppercase border-b-3">
-      <p class="mb-4 font-medium lg:text-2xl lg:mb-6">Where am I from?</p>
+      <p class="mb-4 font-medium lg:text-2xl lg:mb-6">
+        {{ $t('index.whereFrom') }}
+      </p>
       <ul class="text-3xl font-bold sm:text-4xl lg:text-6xl leading-tighter">
-        <li class="mb-3 lg:mb-5 last-of-type:mb-0">SW Germany</li>
+        <li class="mb-3 lg:mb-5 last-of-type:mb-0">
+          {{ $t('index.swGermany') }}
+        </li>
       </ul>
     </div>
 
     <div class="w-full p-8 uppercase group">
       <p class="mb-4 font-medium lg:text-2xl lg:mb-6">
-        Where can you see more?
+        {{ $t('index.whereMore') }}
       </p>
       <ul class="text-3xl font-bold sm:text-4xl lg:text-6xl leading-tighter">
         <li

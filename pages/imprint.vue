@@ -1,6 +1,6 @@
 <template>
   <div class="p-8">
-    <h1>Imprint</h1>
+    <h1>{{ $t('base.imprint') }}</h1>
     <p>
       Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
       eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam
