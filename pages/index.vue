@@ -1,7 +1,12 @@
 <template>
-  <LandingPage/>
+  <LandingPage />
 </template>
 
 <script>
-export default {}
+export default {
+  transition: {
+    name: 'default',
+    mode: 'out-in',
+  },
+}
 </script>
