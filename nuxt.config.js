@@ -87,8 +87,7 @@ export default {
     download: true,
     base64: true,
     families: {
-      Roboto: true,
-      'Work+Sans': {
+      Poppins: {
         wght: [500, 700],
         ital: [500, 700],
       },

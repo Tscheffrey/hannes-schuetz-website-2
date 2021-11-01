@@ -5,6 +5,7 @@
       items-stretch
       w-full
       min-h-screen
+      tracking-wide
       border-l-3 border-r-3
     "
   >

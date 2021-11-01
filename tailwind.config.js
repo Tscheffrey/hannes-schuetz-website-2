@@ -44,7 +44,7 @@ module.exports = {
         tighter: '0.9',
       },
       fontFamily: {
-        sans: ['Work Sans', 'sans-serif'],
+        sans: ['Poppins', 'sans-serif'],
       },
     },
   },
