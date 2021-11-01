@@ -74,10 +74,20 @@
         overflow-hidden
         border-r-3
         sm:border-r-0 sm:border-l-3 sm:order-3
+        group
+        user-select-none
       "
     >
       <NuxtLink
-        class="w-full h-full uppercase"
+        class="
+          w-full
+          h-full
+          font-semibold
+          uppercase
+          transition-opacity
+          duration-300
+          hover-hover:opacity-0 hover-hover:group-hover:opacity-100
+        "
         :to="switchLocalePath($i18n.locale === 'de' ? 'en' : 'de')"
       >
         <transition name="language-switcher-1">
@@ -94,7 +104,7 @@
               h-full
             "
           >
-            de
+            en
           </div>
         </transition>
 
@@ -112,10 +122,29 @@
               h-full
             "
           >
-            en
+            de
           </div>
         </transition>
       </NuxtLink>
+
+      <div
+        class="
+          absolute
+          top-0
+          left-0
+          flex
+          items-center
+          justify-center
+          w-full
+          h-full
+          transition-opacity
+          duration-300
+          pointer-events-none
+          hover-hover:opacity-100 hover-hover:group-hover:opacity-0
+        "
+      >
+        <GlobeIcon />
+      </div>
     </div>
 
     <ul
@@ -124,7 +153,7 @@
         items-center
         w-full
         h-full
-        px-8
+        px-5
         overflow-x-auto
         font-medium
         uppercase
@@ -132,13 +161,13 @@
         lg:px-4
       "
     >
-      <li class="mr-6">
+      <li class="mr-4 lg:mr-6 last:mr-0">
         <NuxtLink :to="localePath('/imprint')">
           {{ $t('base.imprint') }}
         </NuxtLink>
       </li>
 
-      <li class="mr-6">
+      <li class="mr-4 lg:mr-6 last:mr-0">
         <NuxtLink :to="localePath('/about')">{{ $t('base.about') }}</NuxtLink>
       </li>
     </ul>
@@ -146,10 +175,10 @@
 </template>
 
 <script>
-import { SunIcon, MoonIcon } from 'vue-feather-icons'
+import { SunIcon, MoonIcon, GlobeIcon } from 'vue-feather-icons'
 
 export default {
-  components: { SunIcon, MoonIcon },
+  components: { SunIcon, MoonIcon, GlobeIcon },
   methods: {
     toggleDarkMode() {
       document.body.classList.toggle('dark')

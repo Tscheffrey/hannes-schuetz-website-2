@@ -4,6 +4,9 @@ module.exports = {
   darkMode: 'class', // or 'media' or 'class'
   theme: {
     extend: {
+      screens: {
+        'hover-hover': { raw: '(hover: hover)' },
+      },
       colors: {
         primary: {
           100: 'var(--color-primary-100)',
