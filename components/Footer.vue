@@ -120,11 +120,12 @@
 
     <ul
       class="
-        flex flex-wrap
+        flex
         items-center
         w-full
         h-full
         px-8
+        overflow-x-auto
         font-medium
         uppercase
         sm:order-1 sm:px-3
