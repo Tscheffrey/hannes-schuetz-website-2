@@ -72,6 +72,7 @@
         flex-shrink-0
         w-12
         overflow-hidden
+        font-semibold
         border-r-3
         sm:border-r-0 sm:border-l-3 sm:order-3
         group
@@ -82,7 +83,6 @@
         class="
           w-full
           h-full
-          font-semibold
           uppercase
           transition-opacity
           duration-300
@@ -156,7 +156,7 @@
         h-full
         px-5
         overflow-x-auto
-        font-medium
+        font-semibold
         uppercase
         sm:order-1 sm:px-3
         lg:px-4
