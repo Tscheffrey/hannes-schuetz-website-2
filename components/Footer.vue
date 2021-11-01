@@ -12,6 +12,7 @@
       border-b-3
     "
   >
+    <!-- Theme switcher -->
     <button
       class="
         box-content
@@ -62,6 +63,61 @@
         <MoonIcon />
       </div>
     </button>
+
+    <!-- Language switcher -->
+    <div
+      class="
+        box-content
+        relative
+        flex-shrink-0
+        w-12
+        overflow-hidden
+        border-r-3
+        sm:border-r-0 sm:border-l-3 sm:order-3
+      "
+    >
+      <NuxtLink
+        class="w-full h-full uppercase"
+        :to="switchLocalePath($i18n.locale === 'de' ? 'en' : 'de')"
+      >
+        <transition name="language-switcher-1">
+          <div
+            v-if="$i18n.locale === 'en'"
+            class="
+              absolute
+              top-0
+              left-0
+              flex
+              items-center
+              justify-center
+              w-full
+              h-full
+            "
+          >
+            de
+          </div>
+        </transition>
+
+        <transition name="language-switcher-2">
+          <div
+            v-if="$i18n.locale === 'de'"
+            class="
+              absolute
+              top-0
+              left-0
+              flex
+              items-center
+              justify-center
+              w-full
+              h-full
+            "
+          >
+            en
+          </div>
+        </transition>
+      </NuxtLink>
+    </div>
+
     <ul
       class="
         flex flex-wrap
@@ -80,16 +136,9 @@
           {{ $t('base.imprint') }}
         </NuxtLink>
       </li>
+
       <li class="mr-6">
         <NuxtLink :to="localePath('/about')">{{ $t('base.about') }}</NuxtLink>
-      </li>
-      <div class="flex-grow"></div>
-      <li class="justify-self-end">
-        <NuxtLink
-          class="uppercase"
-          :to="switchLocalePath($i18n.locale === 'de' ? 'en' : 'de')"
-          >{{ $i18n.locale === 'de' ? 'en' : 'de' }}</NuxtLink
-        >
       </li>
     </ul>
   </div>
@@ -107,3 +156,31 @@ export default {
   },
 }
 </script>
+
+<style lang="postcss">
+.language-switcher-1-enter-active,
+.language-switcher-1-leave-active {
+  transition: transform 200ms ease;
+}
+
+.language-switcher-1-enter {
+  @apply -translate-x-full;
+}
+
+.language-switcher-1-leave-active {
+  @apply -translate-x-full;
+}
+
+.language-switcher-2-enter-active,
+.language-switcher-2-leave-active {
+  transition: transform 200ms ease;
+}
+
+.language-switcher-2-enter {
+  @apply translate-x-full;
+}
+
+.language-switcher-2-leave-active {
+  @apply translate-x-full;
+}
+</style>
