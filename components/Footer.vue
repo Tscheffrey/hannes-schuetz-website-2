@@ -139,6 +139,7 @@
           h-full
           transition-opacity
           duration-300
+          opacity-0
           pointer-events-none
           hover-hover:opacity-100 hover-hover:group-hover:opacity-0
         "
