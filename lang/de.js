@@ -9,7 +9,7 @@ export default {
     webDevelopment: 'Web-Entwicklung',
     digitalPhotography: 'Digitale Fotografie',
     analogPhotography: 'Analoge Fotografie',
-    whereFrom: 'Wo komme ich her?',
+    whereFrom: 'Wo ich herkomme?',
     swGermany: 'Südwest-Deutschland',
     whereMore: `Wo gibt's mehr dazu?`,
   },
