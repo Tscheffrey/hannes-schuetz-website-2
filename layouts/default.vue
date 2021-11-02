@@ -1,29 +1,11 @@
 <template>
   <div
-    class="
-      flex flex-col
-      items-stretch
-      w-full
-      min-h-screen
-      tracking-wide
-      border-l-3 border-r-3
-    "
+    class="flex flex-col items-stretch w-full min-h-screen tracking-wide border-l-3 border-r-3"
   >
     <!-- Mobile Logo -->
     <NuxtLink
-      to="/"
-      class="
-        sticky
-        top-0
-        z-40
-        block
-        p-8
-        overflow-hidden
-        border-b-3
-        sm:hidden
-        border-t-3
-        bg-secondary-100
-      "
+      :to="localePath('/')"
+      class="sticky top-0 z-40 block p-8 overflow-hidden border-b-3 sm:hidden border-t-3 bg-secondary-100"
     >
       <div class="flex mb-4 logo-wrapper-mobile animate-logoScrollMobile1">
         <div class="flex-shrink-0 w-1/2 pr-12">
@@ -50,21 +32,7 @@
     <!-- Desktop Logo -->
     <NuxtLink
       :to="localePath('/')"
-      class="
-        fixed
-        top-0
-        left-0
-        z-40
-        justify-center
-        flex-shrink-0
-        hidden
-        h-full
-        overflow-hidden
-        w-14
-        sm:block
-        border-r-3
-        lg:w-18
-      "
+      class="fixed top-0 left-0 z-40 justify-center flex-shrink-0 hidden h-full overflow-hidden w-14 sm:block border-r-3 lg:w-18"
     >
       <DesktopLogo
         class="
