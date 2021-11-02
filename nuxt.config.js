@@ -52,10 +52,12 @@ export default {
       {
         code: 'en',
         file: 'en.js',
+        name: 'English',
       },
       {
         code: 'de',
         file: 'de.js',
+        name: 'Deutsch',
       },
     ],
     defaultLocale: 'de',

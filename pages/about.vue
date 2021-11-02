@@ -1,16 +1,23 @@
 <template>
   <div class="p-8">
-    <h1>{{ $t('base.about') }}</h1>
-    <p>
-      Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
-      eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam
-      voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet
-      clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit
-      amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
-      nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed
-      diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.
-      Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor
-      sit amet.
-    </p>
+    <nuxt-content :document="article" />
   </div>
 </template>
+
+<script>
+export default {
+  async asyncData({ $content, i18n }) {
+    const article = await $content(`${i18n.locale}/about`).fetch()
+    return {
+      article,
+    }
+  },
+  beforeMount() {
+    setTimeout(async () => {
+      this.$data.article = await this.$content(
+        `${this.$i18n.locale}/about`
+      ).fetch()
+    }, 100)
+  },
+}
+</script>

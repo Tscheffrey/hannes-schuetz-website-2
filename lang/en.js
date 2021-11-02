@@ -2,6 +2,7 @@ export default {
   base: {
     imprint: 'Imprint',
     about: 'About',
+    blog: 'Blog',
   },
 
   index: {
