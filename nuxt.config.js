@@ -2,6 +2,8 @@ export default {
   // Target: https://go.nuxtjs.dev/config-target
   target: 'static',
 
+  ssr: false,
+
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
     title: 'Hannes Schütz',
@@ -18,7 +20,7 @@ export default {
   css: ['@/assets/css/base.css', '@/assets/css/transitions.css'],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
-  plugins: ['@/plugins/router'],
+  plugins: ['@/plugins/router', '@/plugins/persistedState.js'],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: true,
