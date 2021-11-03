@@ -5,7 +5,7 @@
     <!-- Theme switcher -->
     <button
       class="box-content relative flex-shrink-0 w-12 overflow-hidden  border-r-3 sm:border-r-0 sm:border-l-3 sm:order-2"
-      @click="toggleDarkMode"
+      @click="toggleTheme"
     >
       <div
         class="absolute top-0 left-0 flex items-center justify-center w-full h-full transition-transform duration-300  dark:translate-x-12 dark:-translate-y-12 dark:rotate-180"
@@ -71,6 +71,7 @@
 
 <script>
 import { SunIcon, MoonIcon, GlobeIcon } from 'vue-feather-icons'
+import { mapMutations } from 'vuex'
 
 export default {
   components: { SunIcon, MoonIcon, GlobeIcon },
@@ -89,9 +90,9 @@ export default {
     }
   },
   methods: {
-    toggleDarkMode() {
-      document.body.classList.toggle('dark')
-    },
+    ...mapMutations({
+      toggleTheme: 'theme/toggleTheme',
+    }),
   },
 }
 </script>
