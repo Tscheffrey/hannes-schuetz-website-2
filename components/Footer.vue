@@ -55,14 +55,13 @@
 
     <!-- Footer Links -->
     <ul
-      class="flex items-center w-full h-full px-5 overflow-x-auto font-semibold uppercase  sm:order-1 sm:px-3 lg:px-4"
+      class="flex items-center w-full h-full px-2 overflow-x-auto font-semibold uppercase  sm:order-1"
     >
-      <li
-        v-for="link in footerLinks"
-        :key="link.url"
-        class="mr-4 lg:mr-6 last:mr-0"
-      >
-        <NuxtLink :to="localePath(link.url)">
+      <li v-for="link in footerLinks" :key="link.url" class="h-full">
+        <NuxtLink
+          :to="localePath(link.url)"
+          class="flex items-center h-full px-2"
+        >
           {{ $t(link.label) }}
         </NuxtLink>
       </li>
