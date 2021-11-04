@@ -16,9 +16,10 @@ module.exports = {
         },
         instagram: '#da2e76',
         twitter: '#00ACEE',
-        github: '#7DBBE6',
-        bitspeicher: '#F6A477',
+        github: 'var(--color-github)',
+        bitspeicher: 'var(--color-bitspeicher)',
         linkedin: '#70B5F9',
+        unsplash: 'var(--color-unsplash)',
       },
       borderWidth: {
         3: '3px',

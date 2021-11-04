@@ -1,12 +1,20 @@
 :root {
   --color-primary-100: #181717;
   --color-secondary-100: #e8eaec;
+
+  --color-unsplash: #000000;
+  --color-bitspeicher: #eb8951;
+  --color-github: #7dbbe6;
 }
 
 /* reverse colors in dark theme */
 .dark {
   --color-primary-100: #dadde0;
   --color-secondary-100: #181717;
+
+  --color-unsplash: #ffffff;
+  --color-bitspeicher: #f6a477;
+  --color-github: #7dbbe6;
 }
 
 body {
